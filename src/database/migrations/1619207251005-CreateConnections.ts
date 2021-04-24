@@ -1,10 +1,11 @@
 import { MigrationInterface, QueryRunner, Table, TableForeignKey } from "typeorm";
 
-export class CreateConnections1619114463141 implements MigrationInterface {
+export class CreateConnections1619207251005 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
+
                 name: "connections",
                 columns: [
                     {
@@ -30,18 +31,17 @@ export class CreateConnections1619114463141 implements MigrationInterface {
                         type: "timestamp",
                         default: "now()",
                     },
-
                     {
                         name: "updated_at",
                         type: "timestamp",
                         default: "now()",
                     },
-
                     {
                         name: "socket_id",
                         type: "varchar",
-                    },
-                ],
+                    }
+
+                ]
             })
         );
         await queryRunner.createForeignKey(
