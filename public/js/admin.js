@@ -1,13 +1,12 @@
 const socket = io();
 let connectionsUsers = [];
-let connectionInSupport = []; //Cria uma variavel para armazenar os atendimentos
+let connectionInSupport = [];
 
 socket.on("admin_list_all_users", (connections) => {
   connectionsUsers = connections;
   document.getElementById("list_users").innerHTML = "";
 
-  let template = document.getElementById("template")
-    .innerHTML;
+  let template = document.getElementById("template").innerHTML;
 
   connections.forEach((connection) => {
     const rendered = Mustache.render(template, {
@@ -24,18 +23,14 @@ function call(id) {
     (connection) => connection.socket_id === id
   );
 
-  connectionInSupport.push(connection); //Quando encontrar a conexao, coloca dentro do array de atendimentos
-
-  const template = document.getElementById("admin_template")
-    .innerHTML;
+  const template = document.getElementById("admin_template").innerHTML;
 
   const rendered = Mustache.render(template, {
     email: connection.user.email,
     id: connection.user_id,
   });
 
-  document.getElementById("supports")
-    .innerHTML += rendered;
+  document.getElementById("supports").innerHTML += rendered;
 
   const params = {
     user_id: connection.user_id,
@@ -97,11 +92,11 @@ function sendMessage(id) {
   text.value = "";
 }
 
-
 socket.on("admin_receive_message", (data) => {
-  const connection = connectionInSupport.find(
-    (connection) => connection.socket_id === data.socket_id
-  ); //Aqui utiliza o array de atendimento que foi inserido acima
+  console.log(data);
+  const connection = connectionsUsers.find(
+    (connection) => (connection.socket_id = data.socket_id)
+  );
 
   const divMessages = document.getElementById(
     `allMessages${connection.user_id}`
@@ -118,12 +113,3 @@ socket.on("admin_receive_message", (data) => {
 
   divMessages.appendChild(createDiv);
 });
-
-/*
-socket.on("admin_user_in_suport", async (params) => {
-  const { user_id } = params;
-  await connectionService.updateAdminID(user_id, socket_id);
-  const allConnectionsWithoutAdmin = await connectionService.findAllWithoutAdmin();
-  io.emit("admin_list_all_users", allConnectionsWithoutAdmin);
-}); */
-
