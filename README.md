@@ -15,6 +15,7 @@
 <h2>Para subir</h2>
 <p>Baixar o projeto </p>
 <p>Abrir o VS Code</p>
+<p>Digite este comando no terminal</p>
 <u>
 <b>
 <i>
