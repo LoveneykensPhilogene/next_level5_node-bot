@@ -4,7 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-<title></title></head>
+<title>NLW-5 node bot</title>
+
+</head>
 
 </head>
 <body>
@@ -12,9 +14,16 @@
 <header>
 <h2>Para subir</h2>
 <p>Abrir o VS Code</p>
-<from action=""  method="">
+<u>
+<b>
+<i>
+yarn dev
+</i>
+</b>
+</u>
+<!--<from action=""  method="">
 <input type="text"  name="yarn dev"  value=""   placeholder=" yarn dev"/> 
-</from>
+</from>-->
 </header>
 <header>
 <p><h2>Para testar</h2></p>
