@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+
+<head>
+
+<meta charset="UTF-8">
+<title></title></head>
+
+</head>
+<body>
 <header><h1> node-bot<h1></header>
 <header>
 <h2>Para subir</h2>
@@ -11,3 +21,5 @@
 <p>Lado Cliente  :<a href="http://localhost:3333/pages/client">Clique aqui</a></p>
 <p>Lado Administrador  :<a href="http://localhost:3333/pages/admin">Clique aqui</a></p>
 </header>
+</body>
+</html>
