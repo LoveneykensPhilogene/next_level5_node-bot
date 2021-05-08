@@ -19,7 +19,7 @@
 <b>
 <p>Digite este comando no terminal</p>
 <i>
-yarn dev
+-> : yarn dev
 </i>
 </b>
 </u>
