@@ -2,7 +2,9 @@
 <header>
 <h2>Para subir</h2>
 <p>Abrir o VS Code</p>
-<p><input type="text"  placeholder=" yarn dev"/> </p>
+<from action=""  method="">
+<input type="text"  name="yarn dev"  value=""   placeholder=" yarn dev"/> 
+</from>
 </header>
 <header>
 <p><h2>Para testar</h2></p>
