@@ -13,6 +13,7 @@
 <header><h1> node-bot<h1></header>
 <header>
 <h2>Para subir</h2>
+<p>Baixar o projeto </p>
 <p>Abrir o VS Code</p>
 <u>
 <b>
